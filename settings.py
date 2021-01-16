@@ -6,10 +6,7 @@ date: 2021-01-10
 
 
 class Settings:
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:Wgd,492261648@192.168.1.104:3307/flk?charset=utf8"
-    SQLALCHEMY_POOL_SIZE = 5
-    SQLALCHEMY_POOL_TIMEOUT = 30
-    SQLALCHEMY_POOL_RECYCLE = -1
+    SQLALCHEMY_DATABASE_URI = "sqlite:///flk.db"
 
 
 class DevSettings(Settings):

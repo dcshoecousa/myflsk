@@ -4,7 +4,9 @@ date: 2021-01-10
 
 """
 
-from . import api
-from api.views import Login
+from api import rest_api
+from api.views import Login, User
 
-api.add_url_rule('/login', view_func=Login.as_view(name='login'))
+rest_api.add_resource(Login, '/login')
+rest_api.add_resource(User, '/user', '/user/<int:id>')
+
