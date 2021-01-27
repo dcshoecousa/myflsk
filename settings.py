@@ -11,6 +11,7 @@ class Settings:
 
 class DevSettings(Settings):
     DEBUG = True
+    REDIS_URL = "redis://:920125@192.168.1.104:6380/0"
     SECRET_KEY = 'THIS_IS_DEV_SECURE_KEY'
 
 

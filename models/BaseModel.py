@@ -1,8 +1,9 @@
-from sqlalchemy import Column, String, Integer, DateTime
+from sqlalchemy import Column, Integer, DateTime
 from common.MysqlHelper import db
 import datetime
 
-class Base(db.Model):
+
+class BaseModel(db.Model):
     __abstract__ = True
 
     id = Column(Integer, primary_key = True)
@@ -15,5 +16,3 @@ class Base(db.Model):
     def save(self):
         db.session.add(self)
         db.session.commit()
-        db.session.close()
-    

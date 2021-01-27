@@ -4,13 +4,13 @@ from flask_migrate import Migrate, MigrateCommand
 from flask_session import RedisSessionInterface
 from admin import admin
 from api import api
-from common.RedisHelper import redis_conn
+from common.RedisHelper import flask_redis
 from common.MysqlHelper import db
 
 
 app = Flask(__name__)
 app.config.from_object("settings.DevSettings")
-
+flask_redis.init_app(app)
 # app.session_interface = RedisSessionInterface(redis=redis_conn, key_prefix='dc')
 
 app.register_blueprint(api)

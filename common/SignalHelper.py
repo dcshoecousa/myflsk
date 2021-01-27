@@ -12,6 +12,13 @@ from flask import signals
 #
 # signals.request_started.connect(test)
 
+def audit_save(*args, **kwargs):
+    print("Test")
+
+
+
+
+
 audit_logging = signals._signals.signal("audit_logging")
 
 

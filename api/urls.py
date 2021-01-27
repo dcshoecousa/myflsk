@@ -5,8 +5,8 @@ date: 2021-01-10
 """
 
 from api import rest_api
-from api.views import Login, User
+from api.views import User, UserProfile
 
-rest_api.add_resource(Login, '/login')
-rest_api.add_resource(User, '/user', '/user/<int:id>')
+rest_api.add_resource(User, '/users/<int:id>', '/users')
+rest_api.add_resource(UserProfile, '/profiles/<int:userId>')
 

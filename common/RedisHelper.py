@@ -4,7 +4,6 @@ date: 2021-01-10
 
 """
 
-import redis
+from flask_redis import FlaskRedis
 
-redis_pool = redis.ConnectionPool(host='192.168.1.104', port=6380, password=920125)
-redis_conn = redis.Redis(connection_pool=redis_pool)
+flask_redis = FlaskRedis()

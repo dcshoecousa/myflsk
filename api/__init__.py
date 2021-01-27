@@ -11,4 +11,4 @@ api = Blueprint('api', __name__)
 rest_api = Api(api)
 
 from api.urls import *
-from models import user
+from models import UserModel
